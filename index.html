@@ -10,44 +10,73 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-     
+      <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3">
-           <div class="row"> <div class="col-9"> <input type="search" placeholder="type a city..."  autocomplete="off" autofocus="on" class="form-control" id="city-input">
-          </div> <div class="col-3"> <input type="submit" value="search" class="btn btn-primary w-100"></div>
-          </div> </form>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="type a city..."
+                  autocomplete="off"
+                  autofocus="on"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li > Last updated:  <span id="date"></span> </li>
+              <li>Last updated: <span id="date"></span></li>
               <li id="description"></li>
             </ul>
-         </div>
+          </div>
           <div class="row">
             <div class="col-6">
-             <div class="clearfix weather-temperature">
-                <img src="..." width="100" alt="Clear" class="float-left" id="icon" />
-           
-           <div class="float-left">  <strong id="temperature"> </strong><span class="units"> <a href="#" id="celsius-link" class="active"> °C </a>| <a href="#" id="fahrenheit-link"> °F</a></span>
-</div>  
-               </div>
+              <div class="clearfix weather-temperature">
+                <img
+                  src="..."
+                  width="100"
+                  alt="Clear"
+                  class="float-left"
+                  id="icon"
+                />
+
+                <div class="float-left">
+                  <strong id="temperature"> </strong
+                  ><span class="units">
+                    <a href="#" id="celsius-link" class="active"> °C </a>|
+                    <a href="#" id="fahrenheit-link"> °F</a></span
+                  >
+                </div>
               </div>
+            </div>
             <div class="col-6">
               <ul>
-          
-                <li >Humidity: <span id="humidity"></span> %</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
-              </ul> 
+              </ul>
             </div>
           </div>
-          <small>
+        </div>
+
+        <small>
           <a
             href="https://github.com/wecodeschool/vanilla-weather-app"
             target="_blank"
@@ -55,8 +84,6 @@
           >
           by Matt Delac
         </small>
-        </div>
-        
       </div>
     </div>
     <script src="src/index.js"></script>
